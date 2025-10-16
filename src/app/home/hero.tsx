@@ -171,8 +171,11 @@ export default function Hero() {
                                 <div className="hidden md:flex items-center justify-center lg:items-end lg:justify-end overflow-visible">
                                         <Rive
                                                 src="/video_editing.riv"
-                                                className="w-full h-full"
-                                                style={{ aspectRatio: "16/9" }}
+                                                className="max-w-[700px] w-full md:h-[500px]"
+                                                // fit="cover"
+                                                style={{
+                                                        aspectRatio: "16/9",
+                                                }}
                                         />
                                 </div>
 
