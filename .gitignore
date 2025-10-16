@@ -40,5 +40,8 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# ignore videos folder
-/videos/*
+
+
+# Ignore videos folder
+/public/videos/
+
