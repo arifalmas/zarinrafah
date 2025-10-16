@@ -2,11 +2,6 @@
 
 import { usePathname } from "next/navigation";
 import { useEffect } from "react";
-
-/**
- * ScrollToHash: listens to location.hash and scrolls the matching element smoothly.
- * Keep as a plain function (not default) so page.tsx only has one default export.
- */
 function ScrollToHash() {
   const pathname = usePathname();
 
