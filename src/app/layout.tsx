@@ -35,8 +35,7 @@ export const metadata: Metadata = {
     images: [
       {
         url: "/og-image.png", // replace with your OG image path
-        width: 1200,
-        height: 630,
+
         alt: "Zarin Rafah - Content Strategist Portfolio",
       },
     ],

@@ -104,11 +104,11 @@ export default function Hero() {
                                                 </AnimatePresence>
                                         </div>
 
-                                        <h1 className="hero-title text-[54px] sm:text-7xl text-[#868686] leading-tight">
+                                        <h1 className="hero-title text-[54px] sm:text-7xl text-[#dcdcdc] leading-tight">
                                                 Video Edits
 
                                                 <br />That
-                                                <span className="text-[#dcdcdc] ml-2">Stand Out!</span>
+                                                <span className="text-[#f8b99c] ml-2">Stand Out!</span>
                                         </h1>
 
                                         <p className="text-xl text-[#8d8d8d]  max-w-[90rem]">

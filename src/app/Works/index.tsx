@@ -25,7 +25,7 @@ const reels = [
         {
                 title: "Reel One",
                 cloudinaryUrl:
-                        "https://player.cloudinary.com/embed/?cloud_name=dbvzabvuy&public_id=zarinrafah_xasd1&profile=cld-default",
+                        "https://player.cloudinary.com/embed/?cloud_name=dbvzabvuy&public_id=reel2_c2catp&profile=cld-default",
         },
         {
                 title: "Reel Two",
@@ -35,12 +35,12 @@ const reels = [
         {
                 title: "Reel Three",
                 cloudinaryUrl:
-                        "https://player.cloudinary.com/embed/?cloud_name=dbvzabvuy&public_id=reel3_zyx987&profile=cld-default",
+                        "https://player.cloudinary.com/embed/?cloud_name=dbvzabvuy&public_id=reel2_c2catp&profile=cld-default",
         },
         {
                 title: "Reel Four",
                 cloudinaryUrl:
-                        "https://player.cloudinary.com/embed/?cloud_name=dbvzabvuy&public_id=reel1_abcxyz&profile=cld-default",
+                        "https://player.cloudinary.com/embed/?cloud_name=dbvzabvuy&public_id=reel2_c2catp&profile=cld-default",
         },
 ];
 
@@ -84,7 +84,7 @@ export default function WorksShowcase() {
                                         {reels.slice(0, 6).map((reel, idx) => (
                                                 <div
                                                         key={idx}
-                                                        className="rounded-2xl border border-neutral-800 bg-[#121212] shadow-md overflow-hidden"
+                                                        className="rounded-2xl  bg-[#121212] shadow-md overflow-hidden"
                                                 >
                                                         <div className="relative pb-[177.78%] h-0 overflow-hidden rounded-lg">
                                                                 <iframe
@@ -112,11 +112,12 @@ export default function WorksShowcase() {
                                                 <iframe
                                                         key={idx}
                                                         src={video.youtubeUrl}
-                                                        loading="lazy"
                                                         className="w-full h-60 md:h-48 lg:h-56 object-cover rounded-2xl"
                                                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                                         allowFullScreen
-                                                ></iframe>
+                                                        loading="lazy"
+                                                />
+
                                         ))}
                                 </motion.div>
                         )}
