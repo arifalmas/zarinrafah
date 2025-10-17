@@ -27,7 +27,7 @@ export default function HeroSectionOne() {
                                 {/* Local Video */}
                                 <div className="relative w-full h-[250px] sm:h-[600px] bg-black">
                                         <video
-                                                src="/videos/zarinrafah.mp4"
+                                                src="https://res.cloudinary.com/dbvzabvuy/video/upload/v1760675842/zarinrafah_gtosor.mp4"
                                                 controls
                                                 autoPlay={false}
                                                 loop
