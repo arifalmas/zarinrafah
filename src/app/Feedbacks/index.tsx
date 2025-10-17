@@ -68,11 +68,11 @@ function ReviewCard({ img, name, username, body }: { img: string; name: string; 
 export function FeedbackSection() {
         return (
                 <div className="flex justify-center py-12 bg-[#000000]">
-                        <div className="relative w-full max-w-6xl flex flex-col items-center justify-center overflow-hidden">
+                        <div className="relative w-full max-w-7xl flex flex-col items-center justify-center overflow-hidden">
 
                                 <div className="text-4xl py-5 text-center">
                                         <h2 className="font-bold text-white">Loved by Creators</h2>
-                                        <p className="text-gray-400 text-lg mt-2">Real reviews. Real love. Real magic.</p>
+                                        <p className="text-gray-300 text-[20px] mt-2">Real reviews. Real love. Real magic.</p>
                                 </div>
 
                                 <Marquee pauseOnHover className="[--duration:20s] mt-4">
@@ -87,10 +87,11 @@ export function FeedbackSection() {
                                         ))}
                                 </Marquee>
 
-                                {/* subtle fade edges */}
-                                <div className="pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-[#000000] to-transparent"></div>
-                                <div className="pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-[#000000] to-transparent"></div>
+
+                                <div className="pointer-events-none absolute inset-y-0 left-0 w-1/2 bg-gradient-to-r from-[#000000f1] to-transparent"></div>
+                                <div className="pointer-events-none absolute inset-y-0 right-0 w-1/2 bg-gradient-to-l from-[#000000ee] to-transparent"></div>
                         </div>
                 </div>
+
         )
 }

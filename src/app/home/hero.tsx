@@ -123,7 +123,7 @@ export default function Hero() {
                                                 >
                                                         <Link
                                                                 href="/contact"
-                                                                className="group relative inline-flex items-center justify-between gap-3 bg-[#191919] text-white px-6 py-3 rounded-full font-semibold shadow-[0_4px_12px_rgba(0,0,0,0.15)] overflow-hidden hover:bg-[#FF5100] border border-[#212121]"
+                                                                className="group relative inline-flex items-center justify-between gap-3 bg-[#FF5100] text-white px-6 py-3 rounded-full font-semibold shadow-[0_4px_12px_rgba(0,0,0,0.15)] overflow-hidden hover:bg-[#1f1f1f] border border-[#212121]"
                                                         >
                                                                 {/* Button text */}
                                                                 <span className="relative z-10">Contact Me</span>

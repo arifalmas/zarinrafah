@@ -25,7 +25,7 @@ export default function Header() {
 
         return (
                 <header className="sticky top-0 z-50 backdrop-blur-xl bg-black border-b border-neutral-800">
-                        <div className="mx-auto max-w-[76rem] px-4 sm:px-6 lg:px-8">
+                        <div className="mx-auto max-w-[74rem] px-4 sm:px-6 lg:px-8">
                                 <div className="flex h-18 items-center justify-between">
 
                                         {/* Logo */}
@@ -64,7 +64,7 @@ export default function Header() {
                                         <div className="flex items-center gap-3">
                                                 <Link
                                                         href="/book-a-call"
-                                                        className="hidden md:inline-block rounded-full  text-white px-5 py-2 text-sm font-medium hover:opacity-90 transition"
+                                                        className="hidden md:inline-block rounded-xl  text-white px-5 py-2 text-sm font-medium hover:opacity-90 transition border border-gray-700  bg-[#1a1a1aca] "
                                                 >
                                                         Book A Call
                                                 </Link>
@@ -78,7 +78,7 @@ export default function Header() {
                                                         {open ? (
                                                                 <svg
                                                                         xmlns="http://www.w3.org/2000/svg"
-                                                                        className="h-6 w-6 text-gray-700"
+                                                                        className="h-6 w-6 text-gray-500"
                                                                         fill="none"
                                                                         viewBox="0 0 24 24"
                                                                         stroke="currentColor"
@@ -93,7 +93,7 @@ export default function Header() {
                                                         ) : (
                                                                 <svg
                                                                         xmlns="http://www.w3.org/2000/svg"
-                                                                        className="h-6 w-6 text-gray-700"
+                                                                        className="h-6 w-6 text-gray-500"
                                                                         fill="none"
                                                                         viewBox="0 0 24 24"
                                                                         stroke="currentColor"
@@ -119,7 +119,7 @@ export default function Header() {
                                                 animate={{ height: "auto", opacity: 1 }}
                                                 exit={{ height: 0, opacity: 0 }}
                                                 transition={{ duration: 0.3, ease: "easeInOut" }}
-                                                className="md:hidden bg-black backdrop-blur-md border-t border-gray-200 overflow-hidden"
+                                                className="md:hidden bg-black backdrop-blur-md border-t border-gray-800 overflow-hidden"
                                         >
                                                 <div className="px-6 py-5 space-y-4">
                                                         {NAV_ITEMS.map((item) => (
@@ -127,18 +127,17 @@ export default function Header() {
                                                                         key={item.name}
                                                                         href={item.href}
                                                                         onClick={() => setOpen(false)}
-                                                                        className="block text-base font-medium text-gray-800 hover:text-black transition"
+                                                                        className="block text-base font-medium text-gray-300 hover:text-black transition"
                                                                 >
                                                                         {item.name}
                                                                 </Link>
                                                         ))}
 
                                                         <Link
-                                                                href="/contact"
-                                                                onClick={() => setOpen(false)}
-                                                                className="block mt-4 text-center rounded-full bg-gradient-to-r from-black to-gray-800 text-white px-5 py-2 text-sm font-medium hover:opacity-90 transition"
+                                                                href="/book-a-call"
+                                                                className="hidden md:inline-block rounded-3xl  text-white px-5 py-2 text-sm font-medium hover:opacity-90 transition border border-gray-700 border-dashed"
                                                         >
-                                                                Hire Me
+                                                                Book A Call
                                                         </Link>
                                                 </div>
                                         </motion.div>

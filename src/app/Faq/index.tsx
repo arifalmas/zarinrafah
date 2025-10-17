@@ -54,14 +54,14 @@ export default function FaqSection() {
                                                         <div
                                                                 key={faq.question}
                                                                 onClick={() => setSelectedIndex(isOpen ? null : index)}
-                                                                className="cursor-pointer rounded-2xl border border-gray-700 border-dashed bg-[#1a1a1a] p-6 shadow-[0px_2px_0px_0px_rgba(255,255,255,0.05)_inset] text-white transition-all duration-300 hover:border-orange-400/50"
+                                                                className="cursor-pointer rounded-2xl border border-gray-700 border-dashed bg-[#1a1a1a] p-6 shadow-[0px_2px_0px_0px_rgba(255,255,255,0.05)_inset] text-white transition-all duration-300 hover:border-gray-700"
                                                         >
                                                                 <div className="flex items-start justify-between">
                                                                         <h3 className="m-0 font-medium text-lg">{faq.question}</h3>
                                                                         <Plus
                                                                                 size={26}
                                                                                 className={cn(
-                                                                                        'flex-shrink-0 text-orange-400 transition-transform duration-300',
+                                                                                        'flex-shrink-0 text-gray-400 transition-transform duration-300',
                                                                                         isOpen && 'rotate-45'
                                                                                 )}
                                                                         />

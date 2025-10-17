@@ -25,22 +25,22 @@ const reels = [
         {
                 title: "Reel One",
                 cloudinaryUrl:
-                        "https://player.cloudinary.com/embed/?cloud_name=dbvzabvuy&public_id=reel2_c2catp&profile=cld-default",
+                        "https://res.cloudinary.com/dbvzabvuy/video/upload/v1760691680/reel3_qyee5r.mp4",
         },
         {
                 title: "Reel Two",
                 cloudinaryUrl:
-                        "https://player.cloudinary.com/embed/?cloud_name=dbvzabvuy&public_id=reel2_c2catp&profile=cld-default",
+                        "https://res.cloudinary.com/dbvzabvuy/video/upload/v1760675830/reel2_c2catp.mp4",
         },
         {
                 title: "Reel Three",
                 cloudinaryUrl:
-                        "https://player.cloudinary.com/embed/?cloud_name=dbvzabvuy&public_id=reel2_c2catp&profile=cld-default",
+                        "https://res.cloudinary.com/dbvzabvuy/video/upload/v1760696180/Comp_5_2_2_t1wko9.mp4",
         },
         {
                 title: "Reel Four",
                 cloudinaryUrl:
-                        "https://player.cloudinary.com/embed/?cloud_name=dbvzabvuy&public_id=reel2_c2catp&profile=cld-default",
+                        "https://res.cloudinary.com/dbvzabvuy/video/upload/v1760697100/zarinr_adqjnd.mp4",
         },
 ];
 
@@ -90,7 +90,7 @@ export default function WorksShowcase() {
                                                                 <iframe
                                                                         src={reel.cloudinaryUrl}
                                                                         className="absolute top-0 left-0 w-full h-full"
-                                                                        allow="autoplay; fullscreen; picture-in-picture"
+                                                                        allow=" fullscreen; picture-in-picture"
                                                                         allowFullScreen
                                                                         frameBorder="0"
                                                                 />
@@ -121,6 +121,9 @@ export default function WorksShowcase() {
                                         ))}
                                 </motion.div>
                         )}
-                </section>
+                        {/*  */}
+
+
+                </section >
         );
 }
