@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Zarin Rafah - Content Strategist & Storyteller",
     description:
-      "Explore Zarin Rafah’s portfolio, an expert content strategist and storyteller, turning ideas into compelling digital experiences. Collaborate, create, and grow your brand with her expertise.",
+      "Zarin Rafah is a creative content strategist and storyteller, turning ideas into captivating digital experiences, create, and grow your brand with engaging videos.",
     url: "https://www.zarinrafah.com",
     siteName: "Zarin Rafah Portfolio",
     images: [
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Zarin Rafah - Content Strategist & Storyteller",
     description:
-      "Explore Zarin Rafah’s portfolio, an expert content strategist and storyteller, turning ideas into compelling digital experiences. Collaborate, create, and grow your brand with her expertise.",
+      "Zarin Rafah is a creative content strategist and storyteller, turning ideas into captivating digital experiences, create, and grow your brand with engaging videos.",
     images: ["/og-image.png"], // same OG image
     creator: "@ZarinRafah", // if Twitter handle exists
   },
