@@ -14,17 +14,34 @@ const longFormVideos = [
                 youtubeUrl: "https://www.youtube.com/embed/QnJjRd6_wn0?si=95MDD8lR7PUhW_OB",
         },
         {
-                title: "Started my editing journey with 0 skills and 5 months later, My work got featured.",
+                title:
+                        "Started my editing journey with 0 skills and 5 months later, My work got featured.",
                 youtubeUrl: "https://www.youtube.com/embed/bfo3QgviQqY?si=THpxX6bYYx6bINeg",
         },
 ];
 
+// 🟠 Cloudinary Reels (replace with your real URLs)
 const reels = [
-        { title: "Reel One", localVideo: "/videos/zarin.mp4" },
-        { title: "Reel Two", localVideo: "/videos/reel3.mp4" },
-        { title: "Reel Four", localVideo: "/videos/reel2.mp4" },
-        { title: "Reel Three", localVideo: "/videos/reel1.mp4" },
-
+        {
+                title: "Reel One",
+                cloudinaryUrl:
+                        "https://player.cloudinary.com/embed/?cloud_name=dbvzabvuy&public_id=zarinrafah_xasd1&profile=cld-default",
+        },
+        {
+                title: "Reel Two",
+                cloudinaryUrl:
+                        "https://player.cloudinary.com/embed/?cloud_name=dbvzabvuy&public_id=reel2_c2catp&profile=cld-default",
+        },
+        {
+                title: "Reel Three",
+                cloudinaryUrl:
+                        "https://player.cloudinary.com/embed/?cloud_name=dbvzabvuy&public_id=reel3_zyx987&profile=cld-default",
+        },
+        {
+                title: "Reel Four",
+                cloudinaryUrl:
+                        "https://player.cloudinary.com/embed/?cloud_name=dbvzabvuy&public_id=reel1_abcxyz&profile=cld-default",
+        },
 ];
 
 export default function WorksShowcase() {
@@ -34,8 +51,7 @@ export default function WorksShowcase() {
                 <section id="works" className="max-w-7xl mx-auto px-6 py-20">
                         {/* Header */}
                         <div className="text-center mb-12">
-
-                                <h2 className="text-4xl font-bold ">My Recent Edits in Action</h2>
+                                <h2 className="text-4xl font-bold">My Recent Edits in Action</h2>
                                 <p className="text-gray-500 mt-4 max-w-4xl text-[18px] mx-auto font-semibold">
                                         A showcase of my latest work, from dynamic Shorts to engaging long-form videos.
                                 </p>
@@ -57,7 +73,7 @@ export default function WorksShowcase() {
                                 ))}
                         </div>
 
-                        {/* Shorts Grid */}
+                        {/* Shorts Grid (Cloudinary videos) */}
                         {activeTab === "shorts" && (
                                 <motion.div
                                         className="grid sm:grid-cols-2 md:grid-cols-4 gap-6 mb-16"
@@ -70,15 +86,13 @@ export default function WorksShowcase() {
                                                         key={idx}
                                                         className="rounded-2xl border border-neutral-800 bg-[#121212] shadow-md overflow-hidden"
                                                 >
-                                                        <div className="aspect-[9/16] max-h-[490px] w-full flex items-center justify-center bg-black/5">
-                                                                <video
-                                                                        src={reel.localVideo}
-                                                                        controls
-
-                                                                        muted
-                                                                        loop
-                                                                        playsInline
-                                                                        className="w-full h-full object-cover rounded-lg"
+                                                        <div className="relative pb-[177.78%] h-0 overflow-hidden rounded-lg">
+                                                                <iframe
+                                                                        src={reel.cloudinaryUrl}
+                                                                        className="absolute top-0 left-0 w-full h-full"
+                                                                        allow="autoplay; fullscreen; picture-in-picture"
+                                                                        allowFullScreen
+                                                                        frameBorder="0"
                                                                 />
                                                         </div>
                                                 </div>
@@ -86,7 +100,7 @@ export default function WorksShowcase() {
                                 </motion.div>
                         )}
 
-                        {/* Videos Grid */}
+                        {/* Long-form YouTube videos */}
                         {activeTab === "videos" && (
                                 <motion.div
                                         className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16"
