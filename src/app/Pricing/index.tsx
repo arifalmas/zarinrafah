@@ -6,7 +6,7 @@ import { FaArrowRight, FaCheckCircle } from "react-icons/fa";
 const plans = [
         {
                 name: "Starter Plan",
-                price: "$150",
+                price: "$350",
                 description: "Ideal for creators uploading up to 5 short videos per month with basic editing.",
                 buttonColor: "bg-[#191919] border border-gray-700 border-dashed text-white hover:bg-orange-600",
                 features: [
@@ -15,16 +15,17 @@ const plans = [
                         "Basic color grading & audio sync",
                         "72-hour turnaround",
                         "Email support",
+                        "What's App support",
                 ],
         },
         {
                 name: "Pro Plan",
-                price: "$350",
+                price: "$850",
                 description: "For active creators posting 10–15 videos per month with advanced editing services.",
                 popular: true,
                 buttonColor: "bg-[#191919] border border-gray-700 border-dashed text-white hover:bg-orange-600",
                 features: [
-                        "Up to 15 videos/month",
+                        "Up to 12 videos/month",
                         "5 revisions per video",
                         "Advanced color grading & audio mix",
                         "48-hour turnaround",
@@ -33,11 +34,11 @@ const plans = [
         },
         {
                 name: "Premium Plan",
-                price: "$700",
+                price: "$1200",
                 description: "Complete content strategy and full-service editing for creators and brands.",
                 buttonColor: "bg-[#191919] border border-gray-700 border-dashed text-white hover:bg-orange-600",
                 features: [
-                        "Up to 30 videos/month",
+                        "Up to 20 videos/month",
                         "Unlimited revisions",
                         "Full content optimization",
                         "48-hour turnaround",

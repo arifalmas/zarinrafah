@@ -6,6 +6,7 @@ import Image from "next/image";
 import { useState } from "react";
 import Profile from "../../../public/zarinrafah.jpg";
 import Footer from "../Footer";
+
 export default function Contact() {
         const [formData, setFormData] = useState({
                 name: "",
@@ -14,35 +15,24 @@ export default function Contact() {
                 message: "",
         });
 
-        const [status, setStatus] = useState("");
-
         const handleChange = (
                 e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
         ) => {
                 setFormData({ ...formData, [e.target.name]: e.target.value });
         };
 
-        const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+        // Instead of sending to backend, open email client
+        const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
                 e.preventDefault();
-                setStatus("Sending...");
 
-                try {
-                        const res = await fetch("/api/contact", {
-                                method: "POST",
-                                headers: { "Content-Type": "application/json" },
-                                body: JSON.stringify(formData),
-                        });
+                const { name, email, subject, message } = formData;
+                const mailtoLink = `mailto:collabzarinrafah@gmail.com?subject=${encodeURIComponent(
+                        subject || "New Message"
+                )}&body=${encodeURIComponent(
+                        `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`
+                )}`;
 
-                        if (res.ok) {
-                                setStatus("Message sent successfully!");
-                                setFormData({ name: "", email: "", subject: "", message: "" });
-                        } else {
-                                setStatus("Failed to send message.");
-                        }
-                } catch (error) {
-                        console.error(error);
-                        setStatus("Failed to send message.");
-                }
+                window.location.href = mailtoLink;
         };
 
         return (
@@ -54,16 +44,18 @@ export default function Contact() {
                                                 initial={{ opacity: 0, y: 30 }}
                                                 animate={{ opacity: 1, y: 0 }}
                                                 transition={{ duration: 0.6 }}
-                                                className="text-4xl md:text-5xl font-bold text-center mb-6"
+                                                className="text-4xl md:text-5xl font-bold text-center mb-6 text-gray-100"
                                         >
-                                                Let’s <span className="text-orange-500">start a project</span> together
+                                                Let’s start a project{" "}
+                                                together
                                         </motion.h2>
 
-                                        <p className="text-center mb-12 text-gray-400">
-                                                Got a project in mind or just want to say hi? Fill out the form or send me an email at{" "}
+                                        <p className="text-center mb-12 text-gray-300 font-medium">
+                                                Got a project in mind or just want to say hi? Fill out the form or
+                                                send me an email at{" "}
                                                 <a
                                                         href="mailto:collabzarinrafah@gmail.com"
-                                                        className="text-orange-500 underline"
+                                                        className="text-gray-200 underline"
                                                 >
                                                         collabzarinrafah@gmail.com
                                                 </a>{" "}
@@ -79,14 +71,14 @@ export default function Contact() {
                                                 className="z-30 flex flex-col lg:flex-row gap-8 bg-[#1E1E1E] rounded-2xl p-2 md:p-4 shadow-lg"
                                         >
                                                 {/* ===== Left Side ===== */}
-                                                <div className="flex-1 z-20 bg-[#1B1B1B] border border-gray-700 p-8 rounded-2xl flex flex-col gap-8">
+                                                <div className="flex-1 z-20 bg-[#0f0f0f] border border-gray-800 p-8 rounded-2xl flex flex-col gap-8">
                                                         <div className="flex items-center gap-4">
                                                                 <Image
                                                                         src={Profile}
                                                                         alt="Zarin Rafah"
                                                                         width={64}
                                                                         height={64}
-                                                                        className="rounded-full border border-gray-700"
+                                                                        className="rounded-full border border-gray-800"
                                                                 />
                                                         </div>
 
@@ -100,10 +92,12 @@ export default function Contact() {
 
                                                         <div className="mt-4 space-y-3 text-sm text-gray-300">
                                                                 <p className="flex items-center gap-2">
-                                                                        <MapPin size={18} className="text-orange-500" /> Dhaka, Bangladesh
+                                                                        <MapPin size={18} className="text-orange-500" /> Dhaka,
+                                                                        Bangladesh
                                                                 </p>
                                                                 <p className="flex items-center gap-2">
-                                                                        <Phone size={18} className="text-orange-500" /> +880 1971-186878
+                                                                        <Phone size={18} className="text-orange-500" /> +880
+                                                                        1971-186878
                                                                 </p>
                                                                 <p className="flex items-center gap-2">
                                                                         <Mail size={18} className="text-orange-500" />{" "}
@@ -116,14 +110,16 @@ export default function Contact() {
                                                                 </p>
                                                         </div>
 
-                                                        <div className="text-gray-500 text-xs pt-6 border-t border-gray-700">
+                                                        <div className="text-gray-400 text-sm pt-6 border-t border-gray-800">
                                                                 © 2025 Zarin Rafah. All rights reserved.
                                                         </div>
                                                 </div>
 
                                                 {/* ===== Right Side (Form) ===== */}
-                                                <div className="flex-1 z-20 bg-[#1B1B1B] border border-gray-700 p-4 md:p-8 rounded-2xl shadow-sm">
-                                                        <h3 className="text-lg font-semibold mb-6 text-white">Get in Touch</h3>
+                                                <div className="flex-1 z-20 bg-[#0f0f0f] border border-gray-800 p-4 md:p-8 rounded-2xl shadow-sm">
+                                                        <h3 className="text-lg font-semibold mb-6 text-white">
+                                                                Get in Touch
+                                                        </h3>
 
                                                         <form onSubmit={handleSubmit} className="space-y-4">
                                                                 <div className="grid md:grid-cols-2 gap-4">
@@ -134,7 +130,7 @@ export default function Contact() {
                                                                                 value={formData.name}
                                                                                 onChange={handleChange}
                                                                                 required
-                                                                                className="w-full p-3 rounded-lg border border-gray-600 bg-[#121212] text-white focus:outline-none focus:border-orange-500"
+                                                                                className="w-full p-3 rounded-lg border border-gray-800 bg-[#121212] text-white focus:outline-none focus:border-orange-500"
                                                                         />
                                                                         <input
                                                                                 type="email"
@@ -143,7 +139,7 @@ export default function Contact() {
                                                                                 value={formData.email}
                                                                                 onChange={handleChange}
                                                                                 required
-                                                                                className="w-full p-3 rounded-lg border border-gray-600 bg-[#121212] text-white focus:outline-none focus:border-orange-500"
+                                                                                className="w-full p-3 rounded-lg border border-gray-800 bg-[#121212] text-white focus:outline-none focus:border-orange-500"
                                                                         />
                                                                 </div>
 
@@ -154,7 +150,7 @@ export default function Contact() {
                                                                         value={formData.subject}
                                                                         onChange={handleChange}
                                                                         required
-                                                                        className="w-full p-3 rounded-lg border border-gray-600 bg-[#121212] text-white focus:outline-none focus:border-orange-500"
+                                                                        className="w-full p-3 rounded-lg border border-gray-800 bg-[#121212] text-white focus:outline-none focus:border-orange-500"
                                                                 />
 
                                                                 <textarea
@@ -164,7 +160,7 @@ export default function Contact() {
                                                                         value={formData.message}
                                                                         onChange={handleChange}
                                                                         required
-                                                                        className="w-full p-3 rounded-lg border border-gray-600 bg-[#121212] text-white focus:outline-none focus:border-orange-500"
+                                                                        className="w-full p-3 rounded-lg border border-gray-800 bg-[#121212] text-white focus:outline-none focus:border-orange-500"
                                                                 ></textarea>
 
                                                                 <motion.button
@@ -174,13 +170,10 @@ export default function Contact() {
                                                                 >
                                                                         Submit Now
                                                                 </motion.button>
-
-                                                                {status && <p className="mt-2 text-sm text-gray-300">{status}</p>}
                                                         </form>
                                                 </div>
                                         </motion.div>
                                 </div>
-
                         </section>
                         <Footer />
                 </>

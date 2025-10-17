@@ -81,24 +81,26 @@ export default function WorksShowcase() {
                                         animate={{ opacity: 1, y: 0 }}
                                         transition={{ duration: 0.5 }}
                                 >
-                                        {reels.slice(0, 6).map((reel, idx) => (
+                                        {reels.map((reel, idx) => (
                                                 <div
                                                         key={idx}
-                                                        className="rounded-2xl  bg-[#121212] shadow-md overflow-hidden"
+                                                        className="rounded-2xl bg-[#121212] shadow-md overflow-hidden"
                                                 >
                                                         <div className="relative pb-[177.78%] h-0 overflow-hidden rounded-lg">
-                                                                <iframe
+                                                                <video
                                                                         src={reel.cloudinaryUrl}
-                                                                        className="absolute top-0 left-0 w-full h-full"
-                                                                        allow=" fullscreen; picture-in-picture"
-                                                                        allowFullScreen
-                                                                        frameBorder="0"
+                                                                        className="absolute top-0 left-0 w-full h-full object-cover rounded-lg"
+                                                                        muted
+                                                                        playsInline
+                                                                        controls
+                                                                        preload="metadata"
                                                                 />
                                                         </div>
                                                 </div>
                                         ))}
                                 </motion.div>
                         )}
+
 
                         {/* Long-form YouTube videos */}
                         {activeTab === "videos" && (

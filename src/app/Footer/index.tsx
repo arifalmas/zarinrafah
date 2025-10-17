@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function Footer() {
         return (
-                <footer className="bg-[#111111] text-gray-300 border-t border-gray-800 py-16 px-6">
+                <footer className="bg-[#111111] text-gray-300 border-t border-gray-800 py-10 px-6">
                         <div className="max-w-7xl mx-auto grid md:grid-cols-4 gap-12">
                                 {/* Brand Info */}
                                 <div className="md:col-span-2">
@@ -64,7 +64,7 @@ export default function Footer() {
                                 </div>
 
                                 {/* LinkedIn Section */}
-                                <div className="flex flex-col justify-start sm:justify-end  sm:mt-0 border border-gray-500 p-6 rounded-xl ">
+                                <div className="flex flex-col justify-start sm:justify-end  sm:mt-0 border border-gray-700 p-6 rounded-xl ">
                                         <h3 className="text-white font-semibold mb-3 text-lg">Let's Connect</h3>
                                         <p className="text-gray-400 mb-4 text-sm max-w-[220px]">
                                                 Explore creative collaborations and strategic ideas with me on LinkedIn.
@@ -80,7 +80,7 @@ export default function Footer() {
                         </div>
 
                         {/* Bottom Line */}
-                        <div className="max-w-7xl mx-auto border-t border-gray-800 mt-14 pt-6 flex flex-col md:flex-row justify-between text-xs text-gray-400">
+                        <div className="max-w-7xl mx-auto border-t border-gray-800 mt-10 pt-6 flex flex-col md:flex-row justify-between text-xs text-gray-400">
                                 <p>© 2025 Zarin Rafah. All Rights Reserved.</p>
                                 <p className="mt-2 md:mt-0">
                                         Design & Developed by{" "}

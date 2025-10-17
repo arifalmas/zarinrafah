@@ -16,7 +16,7 @@ export default function CtaSection() {
                                         className="max-w-xl"
                                 >
                                         <h2 className="text-4xl md:text-5xl font-semibold leading-tight text-white">
-                                                Ready to <span className="text-orange-400">10x your video views?</span>
+                                                Ready to <span className="text-orange-400">10x </span>your video views?
                                         </h2>
 
                                         <p className="mt-4 text-lg text-gray-300">
@@ -27,7 +27,7 @@ export default function CtaSection() {
                                                 <motion.a
                                                         whileHover={{ scale: 1.05 }}
                                                         whileTap={{ scale: 0.95 }}
-                                                        href="#"
+                                                        href="/book-a-call"
                                                         className="inline-flex items-center justify-center rounded-lg bg-[#121212] border border-gray-800 px-6 py-3 text-white font-medium shadow-md hover:bg-orange-600 transition-all"
                                                 >
                                                         <a href="/book-a-call">Book a Call</a> <ArrowRight className="ml-2 w-5 h-5" />
@@ -36,7 +36,7 @@ export default function CtaSection() {
                                                 <motion.a
                                                         whileHover={{ scale: 1.05 }}
                                                         whileTap={{ scale: 0.95 }}
-                                                        href="#"
+                                                        href="/contact"
                                                         className="inline-flex items-center justify-center rounded-lg border border-orange-500 px-6 py-3 font-medium text-orange-400 hover:bg-orange-50/10 transition-all"
                                                 >
                                                         <a href="/contact">Contact Me</a> <MessageCircle className="ml-2 w-5 h-5" />
