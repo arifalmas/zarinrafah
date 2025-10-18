@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Plus_Jakarta_Sans } from "next/font/google";
+import Script from "next/script";
 import Header from "./components/header";
 import "./globals.css";
 
@@ -23,19 +24,27 @@ export const metadata: Metadata = {
   title: "Zarin Rafah - Content Strategist & Storyteller",
   description:
     "Explore Zarin Rafah’s portfolio, an expert content strategist and storyteller, turning ideas into compelling digital experiences. Collaborate, create, and grow your brand with her expertise.",
-  keywords: ["Zarin Rafah", "Content Strategist", "Storyteller", "Digital Content", "Video Editing", "Content Strategy", "Collaboration", "Portfolio"],
-  authors: [{ name: "Zarin Rafah", url: "https://www.zarinrafah.com" }],
+  keywords: [
+    "Zarin Rafah",
+    "Content Strategist",
+    "Storyteller",
+    "Digital Content",
+    "Video Editing",
+    "Content Strategy",
+    "Collaboration",
+    "Portfolio",
+  ],
+  authors: [{ name: "Zarin Rafah", url: "https://zarinrafah.com" }],
   creator: "Zarin Rafah",
   openGraph: {
     title: "Zarin Rafah - Content Strategist & Storyteller",
     description:
-      "Zarin Rafah is a creative content strategist and storyteller, turning ideas into captivating digital experiences, create, and grow your brand with engaging videos.",
-    url: "https://www.zarinrafah.com",
+      "Zarin Rafah is a creative content strategist and storyteller, turning ideas into captivating digital experiences. Create and grow your brand with engaging videos.",
+    url: "https://zarinrafah.com",
     siteName: "Zarin Rafah Portfolio",
     images: [
       {
-        url: "/og-image.png", // replace with your OG image path
-
+        url: "/og-image.png",
         alt: "Zarin Rafah - Content Strategist Portfolio",
       },
     ],
@@ -45,9 +54,9 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Zarin Rafah - Content Strategist & Storyteller",
     description:
-      "Zarin Rafah is a creative content strategist and storyteller, turning ideas into captivating digital experiences, create, and grow your brand with engaging videos.",
-    images: ["/og-image.png"], // same OG image
-    creator: "@ZarinRafah", // if Twitter handle exists
+      "Zarin Rafah is a creative content strategist and storyteller, turning ideas into captivating digital experiences. Create and grow your brand with engaging videos.",
+    images: ["/og-image.png"],
+    creator: "@ZarinRafah",
   },
 };
 
@@ -58,6 +67,30 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        {/* Google Analytics */}
+        <Script
+          strategy="afterInteractive"
+          src={`https://www.googletagmanager.com/gtag/js?id=G-NEGTCQM3Q3`}
+        />
+        <Script
+          id="google-analytics"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-NEGTCQM3Q3', {
+                page_path: window.location.pathname,
+                stream_name: 'Zarin Rafah',
+                stream_url: 'https://zarinrafah.com',
+                stream_id: '12313308748'
+              });
+            `,
+          }}
+        />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${plusJakarta.variable} antialiased`}
       >
