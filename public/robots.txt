@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://zarinrafah.com
+
+# Sitemaps
+Sitemap: https://zarinrafah.com/sitemap.xml
