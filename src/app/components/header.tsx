@@ -13,7 +13,7 @@ interface NavItem {
 }
 
 const NAV_ITEMS: NavItem[] = [
-        { name: "About", href: "#about" },
+        { name: "About", href: "/about" },
         { name: "Work", href: "#works" },
         { name: "Solution", href: "#solution" },
         { name: "Pricing", href: "#pricing" },
@@ -39,6 +39,9 @@ export default function Header() {
                                                 />
                                                 <div className=" sm:flex sm:flex-col leading-tight">
                                                         <span className="font-semibold text-gray-100">Zarin Rafah</span>
+                                                </div>
+                                                <div className="bg-[#1f1f1f] px-2 rounded text-[11px]">
+                                                        <h3>BETA</h3>
                                                 </div>
                                         </Link>
 

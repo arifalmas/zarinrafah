@@ -31,7 +31,7 @@ function ScrollToHash() {
   return null;
 }
 
-import About from "./About/about";
+import About from "./components/About/about";
 import CtaSection from "./CTA";
 import FaqSection from "./Faq/";
 import { FeedbackSection } from "./Feedbacks/index";

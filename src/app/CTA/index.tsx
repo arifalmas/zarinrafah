@@ -30,7 +30,7 @@ export default function CtaSection() {
                                                         href="/book-a-call"
                                                         className="inline-flex items-center justify-center rounded-lg bg-[#121212] border border-gray-800 px-6 py-3 text-white font-medium shadow-md hover:bg-orange-600 transition-all"
                                                 >
-                                                        <a href="/book-a-call">Book a Call</a> <ArrowRight className="ml-2 w-5 h-5" />
+                                                        Book a Call <ArrowRight className="ml-2 w-5 h-5" />
                                                 </motion.a>
 
                                                 <motion.a
@@ -39,7 +39,7 @@ export default function CtaSection() {
                                                         href="/contact"
                                                         className="inline-flex items-center justify-center rounded-lg border border-orange-500 px-6 py-3 font-medium text-orange-400 hover:bg-orange-50/10 transition-all"
                                                 >
-                                                        <a href="/contact">Contact Me</a> <MessageCircle className="ml-2 w-5 h-5" />
+                                                        Contact Me<MessageCircle className="ml-2 w-5 h-5" />
                                                 </motion.a>
                                         </div>
                                 </motion.div>
