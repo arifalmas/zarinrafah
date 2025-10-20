@@ -166,7 +166,7 @@ export default function WorksShowcase() {
                                                         className="w-28 md:w-36 rounded-xl shadow-md border-2 border-dashed border-gray-800 "
                                                 />
                                                 <h2 className="text-2xl md:text-3xl font-bold text-white">
-                                                        Explore <span className="text-red-500 font-black">Zarin Rafah’s</span> YouTube Channel
+                                                        Explore My<span className="text-red-500 font-black"> YouTube</span>  Channel
                                                 </h2>
                                                 <p className="text-gray-300 max-w-md">
                                                         Where creativity meets storytelling - made for creators like you.
