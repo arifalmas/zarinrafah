@@ -147,7 +147,7 @@ export default function WorksShowcase() {
                                 transition={{ duration: 0.8 }}
                         >
                                 {/* Animated background glow effect */}
-                                <div className="absolute inset-0 bg-gradient-to-r from-gray-500/10 via-transparent to-red-500/10 blur-4xl animate-pulse"></div>
+                                <div className="absolute inset-0 bg-gradient-to-r from-[#000000] via-[#121212] to-[#0c0c0c] blur-4xl animate-pulse"></div>
 
                                 {/* Grid layout */}
                                 <div className="relative grid md:grid-cols-2 items-center gap-10">
@@ -175,7 +175,7 @@ export default function WorksShowcase() {
 
                                         {/* Right Side - Call to Action */}
                                         <motion.div
-                                                className="relative bg-[#191919] rounded-2xl border border-gray-800 flex flex-col items-center justify-center text-center p-7 md:p-10 shadow-md z-10"
+                                                className="relative bg-[#0d0d0d] rounded-2xl border border-dashed border-gray-700 flex flex-col items-center justify-center text-center p-7 md:p-10 shadow-md z-10"
                                                 initial={{ opacity: 0, x: 50 }}
                                                 whileInView={{ opacity: 1, x: 0 }}
                                                 viewport={{ once: true }}
