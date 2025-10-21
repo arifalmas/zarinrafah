@@ -54,7 +54,7 @@ function ReviewCard({ img, name, username, body }: { img: string; name: string; 
                         )}
                 >
                         <div className="flex flex-row items-center gap-2">
-                                <img className="rounded-full" width="32" height="32" alt={name} src={img} />
+                                {/* <img className="rounded-full" width="32" height="32" alt={name} src={img} /> */}
                                 <div className="flex flex-col">
                                         <figcaption className="text-sm font-semibold text-white">{name}</figcaption>
                                         <p className="text-[14px] text-gray-400">{username}</p>
