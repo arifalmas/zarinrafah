@@ -135,6 +135,8 @@ export default function Work() {
                                                         muted
                                                         loop
                                                         playsInline
+                                                        preload="auto"
+                                                        poster="/zarin rafah thumbnail.png"
                                                         className="w-full h-full object-cover rounded-lg"
                                                 />
                                         </motion.div>
