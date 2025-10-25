@@ -45,14 +45,14 @@ const fadeIn: Variants = {
 
 export default function ReadmapAnimation() {
         return (
-                <section id="process" className="py-20">
+                <section id="process" className="py-20 font-[Poppins]">
                         <div className="max-w-6xl mx-auto px-4 text-center">
                                 <motion.h2
                                         initial={{ opacity: 0, y: -20 }}
                                         whileInView={{ opacity: 1, y: 0 }}
                                         transition={{ duration: 0.5 }}
                                         viewport={{ once: true }}
-                                        className="text-4xl font-bold text-gray-200 mb-3"
+                                        className="text-4xl font-bold text-gray-200 mb-4"
                                 >
                                         How It Works?
                                 </motion.h2>
@@ -62,12 +62,12 @@ export default function ReadmapAnimation() {
                                         whileInView={{ opacity: 1 }}
                                         transition={{ delay: 0.2 }}
                                         viewport={{ once: true }}
-                                        className="text-gray-400 max-w-2xl mx-auto mb-14"
+                                        className="text-gray-400 text-xl max-w-3xl mx-auto mb-14"
                                 >
                                         A creative and simple workflow to take your footage from raw clips to scroll-stopping content.
                                 </motion.p>
 
-                                <div className="grid sm:grid-cols-2 gap-8">
+                                <div className="grid sm:grid-cols-2 gap-4">
                                         {steps.map((step, i) => (
                                                 <motion.div
                                                         key={step.id}

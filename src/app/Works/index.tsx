@@ -63,11 +63,11 @@ export default function WorksShowcase() {
         const [activeTab, setActiveTab] = useState("shorts");
 
         return (
-                <section id="works" className="max-w-6xl mx-auto px-6 py-20">
+                <section id="works" className=" font-[Poppins] max-w-6xl mx-auto px-6 py-20">
                         {/* Header */}
                         <div className="text-center mb-12">
-                                <h2 className="text-4xl font-bold">My Recent Edits in Action</h2>
-                                <p className="text-gray-500 mt-4 max-w-4xl text-[18px] mx-auto font-semibold">
+                                <h2 className="text-5xl font-bold">My Recent Edits in Action</h2>
+                                <p className="text-gray-400 mt-4 max-w-4xl text-[20px] mx-auto">
                                         A showcase of my latest work, from dynamic Shorts to engaging long-form videos.
                                 </p>
                         </div>

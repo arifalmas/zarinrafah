@@ -1,97 +1,163 @@
-"use client"
+"use client";
 
-import { cn } from "../../../lib/utils"
-import { Marquee } from "./marque"
 
 const reviews = [
         {
-                name: "মুমতাজ মুমু ",
-                username: "@therefore.mumu",
-                body: "She’s one of the brightest star of our community. Talented, humble, sweet and what not! Best of luck Sumaiya Jannat Zarin ei nao fuler tora 💐",
-                img: "https://scontent.fjsr11-1.fna.fbcdn.net/v/t39.30808-6/557621042_3776348299325960_707900422198859513_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeHEFLtWiEa9QnAl3PRDQDciJsGLF_ccieImwYsX9xyJ4j2tz_-BQcx_1FPLXr2Uzxy78d1KYMdMKsGDJ30IoDsK&_nc_ohc=tcjNqMyJepwQ7kNvwGrrB8H&_nc_oc=Adnym5GzxrmeIkwlJHNSdTAGiAueUg_vCdIQHhPQ3Zdl1jqH8VcQewev1Nd7ONXlqpA&_nc_zt=23&_nc_ht=scontent.fjsr11-1.fna&_nc_gid=hnXkiU7CAi8vBla2YlHG8A&oh=00_AffFDzltJafXIb1_UrzvAZ2bROACT7L94u_XwiFiHzTUxw&oe=68F6E70D",
-        },
-        {
                 name: "Ali Nawaz",
-                username: "@alinawazyeasin13",
+                platform: "commented on Facebook",
                 body: "Your editing is outstanding but I want to know the secret of your accent. How did you learn it so nicely? 👀",
-                img: "https://scontent.fjsr11-1.fna.fbcdn.net/v/t39.30808-6/540763778_122174432456570795_4232384877208284120_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeHY0UbBM-76xw70JzBLfj05BMlwgfv4yVsEyXCB-_jJW3gLHuH-EgqbqupfveDpy612DtVSdzsEKQAXet8MOy1i&_nc_ohc=m87nQIwkTsMQ7kNvwHltLRQ&_nc_oc=Adn6s1oejC1tM2V7iUAYdtyFNqIAQGTIWTOTaP-nYdCoVSgcjVYHAgBmmABqVsj8HLk&_nc_zt=23&_nc_ht=scontent.fjsr11-1.fna&_nc_gid=7vB1CdoIad--vYWsBq2czQ&oh=00_Aff3WSe5v8-UIKt8vlKemVHaVWaNHW8zxIU0PSvCMlnTPQ&oe=68F715B8",
+                img: "https://cbx-prod.b-cdn.net/COLOURBOX25634105.jpg?width=800&height=800&quality=70",
+
         },
         {
-                name: "Saad Mahmud ",
-                username: "@editedbysaad",
+                name: "মুমতাজ মুমু",
+                platform: "commented on Facebook",
+                body: "She’s one of the brightest star of our community. Talented, humble, sweet and what not! Best of luck Sumaiya Jannat Zarin ei nao fuler tora 💐",
+                img: "https://cbx-prod.b-cdn.net/COLOURBOX25634105.jpg?width=800&height=800&quality=70",
+
+        },
+        {
+                name: "Jannatul Maowa Runa",
+                platform: "commented on Facebook",
+                body: "Girl, you killed it! 🔥 From your accent to your editing skills, everything was so smooth and engaging that I didn’t even realize how quickly the video ended. This is such a creative way to share your journey- Mad respect for the effort you put into this, it’s motivating me already 🌿✨",
+                img: "https://cbx-prod.b-cdn.net/COLOURBOX25634105.jpg?width=800&height=800&quality=70",
+
+        },
+        {
+                name: "Tanjir Pallab",
+                platform: "commented on Facebook",
+                body: "Nah shesh! You crossed your limit, ekhon ar obaak hobona kono kichute. Ami jmn clean edit pochondo kori eta shegulor moddhei ekta, nothing fancy just proper visuals, accent, sound design (still needs to improve a bit) and everything. Outstanding❤️",
+                img: "https://cbx-prod.b-cdn.net/COLOURBOX25634105.jpg?width=800&height=800&quality=70",
+
+        },
+        {
+                name: "Saad Mahmud",
+                platform: "commented on Facebook",
                 body: "This girl Sumaiya Jannat Zarin does amazing work- I'm becoming a big fan! She has a bright future ahead. Lots of love and best wishes, sister.💙",
-                img: "https://scontent.fjsr11-1.fna.fbcdn.net/v/t39.30808-6/474789045_28399683526314015_2762516847304864913_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeEhphnvUG1PcbnNPsrpxEPWELmZ-gzjaIMQuZn6DONog7cM58L4oQWxT-WBmahHVK2ap12aLlDiNw3KYw_uFkzQ&_nc_ohc=pn2N5RZCojcQ7kNvwGQ-iOq&_nc_oc=AdnKfgWmdsgff4YLzFS8WKo1aoz2icc7q-z9U9cOgHqLSogd7MLJab2D6Obd72qDmB0&_nc_zt=23&_nc_ht=scontent.fjsr11-1.fna&_nc_gid=lvnyIGJ-icHtmLbSzU9Nyw&oh=00_AfcLNkOl5C5rYfwiXpp0CGInP-_GDso9DCfWDYsock0Czw&oe=68F71202",
+                img: "https://cbx-prod.b-cdn.net/COLOURBOX25634105.jpg?width=800&height=800&quality=70",
+
         },
+
         {
-                name: "Farhana Rahman",
-                username: "@farhana.rahman.183461",
-                body: "I believe, her NAME will be her BRAND soon! ",
-                img: "https://scontent.fjsr11-1.fna.fbcdn.net/v/t39.30808-1/487814890_122249445536023445_7408637806272460579_n.jpg?stp=c0.117.686.686a_dst-jpg_s200x200_tt6&_nc_cat=109&ccb=1-7&_nc_sid=1d2534&_nc_eui2=AeE3qb7gRjobVSvI9_CJltLTgJ5UKKdmzaOAnlQop2bNoxF_mXj9bPFJPOerojKwpaM731qXfYlzy7xv7N0ScUeR&_nc_ohc=eIydKbpGyOoQ7kNvwFAwm0J&_nc_oc=AdnBu4l8U3Gqz-MXZsxPR-r5dCPNmZr1AMYu8YFvzPstmpbekAZRnHXb_hPtWaQExR4&_nc_zt=24&_nc_ht=scontent.fjsr11-1.fna&_nc_gid=YUU1b_bZdrmzVMTQtHXUbA&oh=00_AfcMSSMpZZPUA21cpaggG_KBYMd2hPSArqfGjXn4iWHgAA&oe=68F6E88D",
+                name: "Maruf Hasan Shagor",
+                platform: "commented on Facebook",
+                body: "kemne pare ekta manush emne edit korte r fluency and pronunciation top notched",
+                img: "https://cbx-prod.b-cdn.net/COLOURBOX25634105.jpg?width=800&height=800&quality=70",
+
         },
         {
                 name: "Arif Almas",
-                username: "@coder.arifalmams",
+                platform: "commented on YouTube",
                 body: "She’s Zarin Rafah. Her storytelling skills are amazing Mashallah, truly inspiring! 🫡",
-                img: "https://scontent.fjsr11-1.fna.fbcdn.net/v/t39.30808-1/558917014_1144859334287856_1690111259556630343_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=103&ccb=1-7&_nc_sid=1d2534&_nc_eui2=AeGQ5ybGzIigLvTBSUIMF1lFtUDznAkzjx61QPOcCTOPHiPhTj1Q0FI8SU0f9uRxfpOJf3PLvZmgumalpSgTkzFn&_nc_ohc=T36mPjEMqjQQ7kNvwFY40qi&_nc_oc=Adl0JSg23NJNfFbG4_SESRpE2gSjZVw2gomVNqCFmzWqZBwZI0BAIA4NwQaSoV-69JU&_nc_zt=24&_nc_ht=scontent.fjsr11-1.fna&_nc_gid=Kf7rNxYY_Pm2bQKel9_2jQ&oh=00_AffREftv0-UOxEfkyXRvpkzdA0uTYbXUzDNAWJEQ_VTbyA&oe=68F6EA80",
+                img: "https://cbx-prod.b-cdn.net/COLOURBOX25634105.jpg?width=800&height=800&quality=70",
+
         },
         {
-                name: "Rafayat Rakib",
-                username: "@therafayatrakib",
-                body: "Damn this feels good 🔥",
-                img: "https://scontent.fjsr11-1.fna.fbcdn.net/v/t39.30808-1/467525648_1288957128905976_6398573940337790450_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=107&ccb=1-7&_nc_sid=1d2534&_nc_eui2=AeHoShxlIR-mbrAjF4lMa6rXj5YukapXd--Pli6Rqld371sp0AhIhCGjVK8O2Pg5mNOo9zG6P7Kjl8XGIQ7ZTABu&_nc_ohc=Cx_TGn79EHEQ7kNvwH_7Vi0&_nc_oc=AdmkzQJhEo4cGMPz3_doYjwvXbvgC9WOEgE_Ab2Key2zdpQf44GvYAjlvn9v_HD9oNQ&_nc_zt=24&_nc_ht=scontent.fjsr11-1.fna&_nc_gid=KQW7QyeOT1wug8xmgzwUJA&oh=00_AffuMo2IWEKIxQT22NNo4PBGhrLZiVMygA80fQy8iDKGAQ&oe=68F70B31",
+                name: "Tanjim Khan",
+                platform: "commented on Facebook",
+                body: "Really crazy editing. You get hooked to the video and keep watch it till the end. Keep it up.",
+                img: "https://cbx-prod.b-cdn.net/COLOURBOX25634105.jpg?width=800&height=800&quality=70",
+
         },
-]
 
-const firstRow = reviews.slice(0, reviews.length / 2)
-const secondRow = reviews.slice(reviews.length / 2)
 
-function ReviewCard({ img, name, username, body }: { img: string; name: string; username: string; body: string }) {
+        {
+                name: "Maruf Hasan Shagor",
+                platform: "commented on YouTube",
+                body: "kemne pare ekta manush emne edit korte r fluency and pronunciation top notched",
+                img: "https://cbx-prod.b-cdn.net/COLOURBOX25634105.jpg?width=800&height=800&quality=70",
+
+        },
+        {
+                name: "Rehman Abdur",
+                platform: "commented on Facebook",
+                body: "Clean, strategic and all the way up. Dua and best wishes for you and your dada ",
+                img: "https://cbx-prod.b-cdn.net/COLOURBOX25634105.jpg?width=800&height=800&quality=70",
+
+        },
+        {
+                name: "Sadman Sharar Riam",
+                platform: "commented on Facebook",
+                body: "Really congratulations on breaking free from the rat race 🔥 never been so inspired as a peer",
+                img: "https://cbx-prod.b-cdn.net/COLOURBOX25634105.jpg?width=800&height=800&quality=70",
+
+        },
+        {
+                name: "Marjahan Begum",
+                platform: "commented on Facebook",
+                body: "Shudhu je chele ra valo parbe ta kintu na. That's why I proud for her ❤️. Genius girl, go ahead and ahead.",
+                img: "https://cbx-prod.b-cdn.net/COLOURBOX25634105.jpg?width=800&height=800&quality=70",
+        },
+];
+
+function ReviewCard({
+        img,
+        name,
+        platform,
+        body,
+}: {
+        img: string;
+        name: string;
+        platform: string;
+        body: string;
+}) {
         return (
-                <figure
-                        className={cn(
-                                "relative h-full w-64 cursor-pointer overflow-hidden rounded-xl border p-4 shadow-sm transition-all duration-300",
-                                "border-gray-700 bg-[#121212] hover:bg-gray-900 text-white",
-                        )}
+                <div
+                        className="
+        group relative bg-[#0d0d0f] border border-neutral-800 
+        rounded-2xl p-6 text-gray-200 shadow-md 
+        transition-all duration-500 ease-out
+        hover:-translate-y-2 hover:shadow-[0_0_25px_-8px_rgba(255,255,255,0.1)]
+        hover:border-neutral-700
+        before:absolute before:inset-0 before:rounded-2xl before:bg-gradient-to-br
+        before:from-white/5 before:to-transparent before:opacity-0
+        before:transition-opacity before:duration-500 group-hover:before:opacity-100
+        backdrop-blur-sm
+        flex flex-col gap-4 font-[Poppins]
+      "
                 >
-                        <div className="flex flex-row items-center gap-2">
-                                {/* <img className="rounded-full" width="32" height="32" alt={name} src={img} /> */}
-                                <div className="flex flex-col">
-                                        <figcaption className="text-sm font-semibold text-white">{name}</figcaption>
-                                        <p className="text-[14px] text-gray-400">{username}</p>
+                        <div className="flex items-center gap-3">
+                                <img
+                                        src={img}
+                                        alt={name}
+                                        width={46}
+                                        height={46}
+                                        className="rounded-full object-cover border border-gray-700 transition-all duration-500 group-hover:scale-105"
+                                />
+                                <div className="text-left">
+                                        <h4 className="text-white font-semibold leading-tight text-lg md:text-xl">
+                                                {name}
+                                        </h4>
+                                        <p className="text-sm md:text-base text-gray-400">{platform}</p>
                                 </div>
                         </div>
-                        <blockquote className="mt-2 text-sm text-gray-300">{body}</blockquote>
-                </figure>
-        )
+
+                        <p className="text-[15px] md:text-[15px] leading-relaxed text-gray-300  group-hover:text-gray-100 transition-colors duration-500">
+                                “{body}”
+                        </p>
+                </div>
+        );
 }
 
 export function FeedbackSection() {
         return (
-                <div className="flex justify-center py-12 bg-[#000000]">
-                        <div className="relative w-full max-w-7xl flex flex-col items-center justify-center overflow-hidden">
-
-                                <div className="text-4xl py-5 text-center">
-                                        <h2 className="font-bold text-white">Loved by Creators</h2>
-                                        <p className="text-gray-300 text-[20px] mt-2">Real reviews. Real love. Real magic.</p>
+                <section className="bg-black py-24 px-6 md:px-10 font-[Poppins]">
+                        <div className="max-w-6xl mx-auto">
+                                <div className="text-center mb-14">
+                                        <h2 className="text-4xl md:text-5xl font-bold text-white mb-3">
+                                                What <span className="text-orange-500 italic">others</span> are saying
+                                        </h2>
+                                        <p className="text-gray-500 text-lg md:text-xl">
+                                                Trusted by creators and storytellers who value emotion and simplicity.
+                                        </p>
                                 </div>
 
-                                <Marquee pauseOnHover className="[--duration:20s] mt-4">
-                                        {firstRow.map((review) => (
-                                                <ReviewCard key={review.username} {...review} />
+                                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+                                        {reviews.map((review, idx) => (
+                                                <ReviewCard key={idx} {...review} />
                                         ))}
-                                </Marquee>
-
-                                <Marquee reverse pauseOnHover className="[--duration:20s]">
-                                        {secondRow.map((review) => (
-                                                <ReviewCard key={review.username} {...review} />
-                                        ))}
-                                </Marquee>
-
-
-                                <div className="pointer-events-none absolute inset-y-0 left-0 w-1/2 bg-gradient-to-r from-[#000000f1] to-transparent"></div>
-                                <div className="pointer-events-none absolute inset-y-0 right-0 w-1/2 bg-gradient-to-l from-[#000000ee] to-transparent"></div>
+                                </div>
                         </div>
-                </div>
-
-        )
+                </section>
+        );
 }

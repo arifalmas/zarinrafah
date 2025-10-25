@@ -1,111 +1,151 @@
 "use client";
 
-import { Camera, Layers, Rocket, Sparkles } from "lucide-react";
+import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 
-export default function About() {
+export default function Work() {
+        const [isClient, setIsClient] = useState(false);
+        useEffect(() => setIsClient(true), []);
+
+        const cards = [
+                {
+                        title: "Next-level edits that don’t empty your wallet",
+                        desc: "Professional video editing tailored for creators and brands looking to elevate their content without breaking the bank.",
+                        bg: "/images/editing-bg-1.jpg",
+                        tag: "Video editing",
+                        tagColor: "bg-[#FF5100]",
+                },
+                {
+                        title: "No complex tools needed",
+                        desc: "Just send your clips. I handle everything from cuts to color grading.",
+                        bg: "/images/editing-bg-3.jpg",
+                },
+                {
+                        title: "Free guide included",
+                        desc: "Get a complimentary content strategy guide with every edit to maximize your reach.",
+                        bg: "/images/editing-bg-4.jpg",
+                },
+                {
+                        title: "Grow your audience",
+                        desc: "We craft edits designed to keep viewers watching and convert attention into engagement.",
+                },
+        ];
+
         return (
-                <section id="about" className="w-full bg-transparent py-6 sm:py-10">
-                        <div className="max-w-[76rem] mx-auto px-4 sm:px-6 lg:px-8">
-                                <div className="flex flex-col md:flex-row md:items-start md:gap-6 lg:gap-10 mt-4">
-                                        {/* Video Column */}
-                                        <div className="flex justify-center md:justify-start mb-8 md:mb-0">
-                                                <div className="rounded-2xl border border-neutral-800 bg-[#121212] w-full sm:w-[360px] md:w-[315px] shadow-md p-3 sm:p-4">
-                                                        <div className="aspect-[9/16] max-h-[650px] rounded-lg overflow-hidden flex items-center justify-center bg-black/5">
-                                                                <video
-                                                                        src="/videos/zarin.mp4"
-                                                                        controls
-                                                                        autoPlay
-                                                                        muted
-                                                                        loop
-                                                                        playsInline
-                                                                        className="w-full h-full object-cover rounded-lg "
-                                                                />
-                                                        </div>
+                <div className="bg-black text-white py-4 sm:py-20 px-4">
+                        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+                                {/* LEFT SIDE */}
+                                <div className="col-span-1 md:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-6">
+                                        {/* Top Large Card */}
+                                        <motion.div
+                                                initial={{ opacity: 0, y: 40 }}
+                                                whileInView={{ opacity: 1, y: 0 }}
+                                                transition={{ duration: 0.6 }}
+                                                viewport={{ once: true }}
+                                                className="md:col-span-2 relative rounded-2xl overflow-hidden bg-[#0f0f10] h-[320px] sm:h-[330px] md:h-[340px]"
+                                        >
+                                                <div className="relative p-5 sm:p-7 md:p-8">
+                                                        <span
+                                                                className={`${cards[0].tagColor} px-2 sm:px-3 py-1 rounded-md text-xs sm:text-sm md:text-sm font-medium`}
+                                                        >
+                                                                {cards[0].tag}
+                                                        </span>
+                                                        <h3 className="text-lg sm:text-xl md:text-2xl font-semibold mt-3 sm:mt-4 mb-3 sm:mb-2 leading-snug">
+                                                                {cards[0].title}
+                                                        </h3>
+                                                        <p className="text-gray-300 text-base sm:text-[15px] md:text-[16px]">
+                                                                {cards[0].desc}
+                                                        </p>
                                                 </div>
-                                        </div>
 
-                                        {/* Text Column */}
-                                        <div className="bg-[#121212] rounded-2xl p-5 sm:p-7 md:p-8 shadow-lg w-full md:h-auto">
-                                                <h2 className="text-2xl sm:text-3xl font-extrabold text-[#b5b5b5]">
-                                                        Hi I'm{" "}
-                                                        <span className="text-[#fff] font-medium">Zarin Rafah</span>
-                                                </h2>
+                                                <img
+                                                        src="https://img.freepik.com/premium-vector/interface-menu-program-panels-motion-design-abstract-background_681307-58.jpg"
+                                                        alt="Card background"
+                                                        className="object-cover opacity-40 rounded-xl"
+                                                />
+                                        </motion.div>
 
-                                                <p className="mt-4 sm:mt-5 text-base sm:text-lg text-gray-400 leading-relaxed">
-                                                        A <span className="font-medium">Content Strategist</span> and
-                                                        Visual Storyteller passionate about creating purposeful visuals
-                                                        that connect. I help brands and creators craft cinematic stories
-                                                        that feel authentic, emotional, and built to engage.
-                                                </p>
+                                        {/* Bottom Left */}
+                                        <motion.div
+                                                initial={{ opacity: 0, y: 40 }}
+                                                whileInView={{ opacity: 1, y: 0 }}
+                                                transition={{ duration: 0.6, delay: 0.1 }}
+                                                viewport={{ once: true }}
+                                                className="bg-[#151515] rounded-2xl p-6 sm:p-8 relative overflow-hidden"
+                                        >
+                                                <div className="w-full h-28 sm:h-36 rounded-xl overflow-hidden mb-5 relative">
+                                                        <img
+                                                                src="https://a.storyblok.com/f/88751/1940x1160/bcdaac1822/content-modeling-explained-preview.png/m/1940x1160/"
+                                                                alt="Card background"
+                                                                className="w-full h-full object-cover"
+                                                        />
+                                                        <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
+                                                </div>
 
-                                                <ul className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
-                                                        {/* Story-driven Strategy */}
-                                                        <li className="bg-neutral-900 border border-neutral-800 rounded-2xl p-5 sm:p-6 shadow-sm flex items-start gap-4 hover:border-amber-500/30 transition-all">
-                                                                <div className="w-12 h-12 sm:w-14 sm:h-14 flex items-center justify-center rounded-xl text-amber-400">
-                                                                        <Sparkles className="w-6 h-6 sm:w-7 sm:h-7" />
-                                                                </div>
-                                                                <div>
-                                                                        <div className="font-semibold text-white text-base sm:text-lg">
-                                                                                Story-driven Strategy
-                                                                        </div>
-                                                                        <div className="text-sm text-gray-400 mt-1">
-                                                                                Every campaign starts with a purpose. I design edits and
-                                                                                content around emotional storytelling and brand voice.
-                                                                        </div>
-                                                                </div>
-                                                        </li>
+                                                <div className="relative z-10 flex flex-col justify-start">
+                                                        <h3 className="text-lg sm:text-xl md:text-2xl font-semibold mb-2">
+                                                                {cards[2].title}
+                                                        </h3>
+                                                        <p className="text-gray-300 text-sm sm:text-base">
+                                                                {cards[2].desc}
+                                                        </p>
+                                                </div>
+                                        </motion.div>
 
-                                                        {/* Platform Optimization */}
-                                                        <li className="bg-neutral-900 border border-neutral-800 rounded-2xl p-5 sm:p-6 shadow-sm flex items-start gap-4 hover:border-amber-500/30 transition-all">
-                                                                <div className="w-12 h-12 sm:w-14 sm:h-14 flex items-center justify-center rounded-xl text-green-400">
-                                                                        <Layers className="w-6 h-6 sm:w-7 sm:h-7" />
-                                                                </div>
-                                                                <div>
-                                                                        <div className="font-semibold text-white text-base sm:text-lg">
-                                                                                Platform Optimization
-                                                                        </div>
-                                                                        <div className="text-sm text-gray-400 mt-1">
-                                                                                Adapting visuals for YouTube, Instagram & TikTok with
-                                                                                data-backed engagement strategies.
-                                                                        </div>
-                                                                </div>
-                                                        </li>
+                                        {/* Bottom Right */}
+                                        <motion.div
+                                                initial={{ opacity: 0, y: 40 }}
+                                                whileInView={{ opacity: 1, y: 0 }}
+                                                transition={{ duration: 0.6, delay: 0.2 }}
+                                                viewport={{ once: true }}
+                                                className="relative bg-[#151515] rounded-2xl p-6 sm:p-8 overflow-hidden"
+                                        >
+                                                <div className="w-full h-28 sm:h-36 rounded-xl overflow-hidden mb-5">
+                                                        <img
+                                                                src="https://cdn.prod.website-files.com/685be7dcd32275d383065239/685be7dcd32275d38306799e_large-Blog%20Cover_2023_03_13%20Best%20Vlog%20Editing%20Software%20for%20Beginners%20_%20Pros%20(All%20Devices).webp"
+                                                                alt="Card background"
+                                                                className="object-cover w-full h-full"
+                                                        />
+                                                </div>
 
-                                                        {/* Visual Consistency */}
-                                                        <li className="bg-neutral-900 border border-neutral-800 rounded-2xl p-5 sm:p-6 shadow-sm flex items-start gap-4 hover:border-amber-500/30 transition-all">
-                                                                <div className="w-12 h-12 sm:w-14 sm:h-14 flex items-center justify-center rounded-xl text-pink-400">
-                                                                        <Camera className="w-6 h-6 sm:w-7 sm:h-7" />
-                                                                </div>
-                                                                <div>
-                                                                        <div className="font-semibold text-white text-base sm:text-lg">
-                                                                                Visual Consistency
-                                                                        </div>
-                                                                        <div className="text-sm text-gray-400 mt-1">
-                                                                                Cohesive branding across all content, ensuring your
-                                                                                audience always recognizes your style.
-                                                                        </div>
-                                                                </div>
-                                                        </li>
+                                                <div className="relative z-10 flex flex-col justify-start">
+                                                        <h3 className="text-lg sm:text-xl md:text-2xl font-semibold mb-2">
+                                                                {cards[1].title}
+                                                        </h3>
+                                                        <p className="text-gray-300 text-sm sm:text-base">
+                                                                {cards[1].desc}
+                                                        </p>
+                                                </div>
+                                        </motion.div>
+                                </div>
 
-                                                        {/* Fast Delivery */}
-                                                        <li className="bg-neutral-900 border border-neutral-800 rounded-2xl p-5 sm:p-6 shadow-sm flex items-start gap-4 hover:border-amber-500/30 transition-all">
-                                                                <div className="w-12 h-12 sm:w-14 sm:h-14 flex items-center justify-center rounded-xl text-indigo-400">
-                                                                        <Rocket className="w-6 h-6 sm:w-7 sm:h-7" />
-                                                                </div>
-                                                                <div>
-                                                                        <div className="font-semibold text-white text-base sm:text-lg">
-                                                                                Fast & Reliable Delivery
-                                                                        </div>
-                                                                        <div className="text-sm text-gray-400 mt-1">
-                                                                                Timely delivery without compromising quality. I respect your
-                                                                                deadlines.
-                                                                        </div>
-                                                                </div>
-                                                        </li>
-                                                </ul>
+                                {/* RIGHT SIDE — Reel Video */}
+                                <div className="flex flex-col">
+                                        <motion.div
+                                                initial={{ opacity: 0, y: 40 }}
+                                                whileInView={{ opacity: 1, y: 0 }}
+                                                transition={{ duration: 0.6, delay: 0.3 }}
+                                                viewport={{ once: true }}
+                                                className="relative rounded-2xl overflow-hidden bg-[#151515] h-[420px] sm:h-[560px] md:h-[600px]"
+                                        >
+                                                <video
+                                                        src="/videos/zarin.mp4"
+                                                        controls
+                                                        autoPlay
+                                                        muted
+                                                        loop
+                                                        playsInline
+                                                        className="w-full h-full object-cover rounded-lg"
+                                                />
+                                        </motion.div>
+
+                                        <div className="mt-10 flex justify-center">
+                                                <button className="cursor-pointer bg-[#FF5100] hover:bg-[#121212] text-white font-semibold w-full py-3 rounded-xl transition">
+                                                        <a href="#works">Explore My Works</a>
+                                                </button>
                                         </div>
                                 </div>
                         </div>
-                </section>
+                </div>
         );
 }

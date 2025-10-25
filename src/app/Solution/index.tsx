@@ -21,22 +21,19 @@ const ourSolutions = [
 
 export default function SolutionSection() {
         return (
-                <section id="solution" className="w-full bg-transparent py-10 px-4 max-w-6xl mx-auto sm:px-6">
+                <section id="solution" className="w-full font-[Poppins] bg-transparent py-10 px-4 max-w-6xl mx-auto sm:px-2">
                         {/* Section Header */}
                         <div className="text-center mb-14">
 
                                 <h2 className="text-4xl md:text-5xl font-bold px-1 mt-4 mb-3">
                                         Why Most Creators Burn Out
                                 </h2>
-                                <p className="text-gray-500 max-w-4xl mx-auto mt-4 font-semibold">
-                                        A quick side-by-side of the struggles you shouldn’t have to deal with
-                                        and how we make sure you don’t.
-                                </p>
+
                         </div>
 
                         {/* ✅ Main Wrapper Card */}
                         <motion.div
-                                className="max-w-6xl mx-auto bg-[#121212] rounded-2xl p-6 shadow-md border border-gray-800"
+                                className="max-w-7xl mx-auto bg-[#121212] rounded-2xl p-6 shadow-md border border-gray-800"
                                 initial={{ opacity: 0 }}
                                 whileInView={{ opacity: 1 }}
                                 viewport={{ once: true }}

@@ -51,14 +51,14 @@ const plans = [
 
 export default function PricingSection() {
         return (
-                <section id="pricing" className="w-full  py-20 px-4 text-white">
+                <section id="pricing" className="w-full font-[Poppins] py-20 px-4 text-white">
                         {/* Header */}
                         <div className="text-center mb-14">
                                 <h2 className="text-4xl md:text-5xl font-bold mt-4 mb-6">
                                         Simple Plans
                                 </h2>
-                                <p className="text-gray-400 max-w-4xl text-1xl mx-auto font-normal">
-                                        As a professional video editor and content strategist, I provide full-service content solutions, from editing shorts, reels, long-form videos, to overall content strategy and optimization. Choose the plan that fits your content flow.
+                                <p className="text-gray-300 max-w-4xl text-[20px] mx-auto font-normal">
+                                        Choose a plan that fits your content creation needs and budget. Need something custom?
 
                                 </p>
                         </div>
@@ -86,7 +86,7 @@ export default function PricingSection() {
                                                         <h3 className="text-xl font-semibold mb-4">{plan.name}</h3>
 
                                                         <div className="flex items-baseline gap-1 mb-2">
-                                                                <p className="text-4xl font-bold">{plan.price}</p>
+                                                                <p className="text-4xl font-semibold">{plan.price}</p>
                                                                 <span className="text-gray-400 text-base font-normal">/month</span>
                                                         </div>
 
@@ -105,7 +105,7 @@ export default function PricingSection() {
                                                         <h4 className="font-semibold mb-3 text-gray-200">
                                                                 Features included:
                                                         </h4>
-                                                        <ul className="space-y-2 text-gray-300">
+                                                        <ul className="space-y-2  text-gray-300">
                                                                 {plan.features.map((feature, i) => (
                                                                         <li key={i} className="flex items-center gap-2">
                                                                                 <FaCheckCircle className="text-gray-500" /> {feature}

@@ -37,13 +37,8 @@ const services = [
 
 export default function Services() {
         return (
-                <section id="services" className="w-full py-24 bg-transparent text-center sm:px-0 px-2">
+                <section id="services" className="w-full py-24 bg-transparent text-center sm:px-0 px-2 font-[Poppins]">
                         <div className="max-w-6xl mx-auto">
-                                {/* <div className="flex items-center justify-center mb-4">
-                                        <p className="text-sm font-medium text-gray-500 bg-orange-100 text-orange-600 px-3 py-1 rounded-full">
-                                                Services
-                                        </p>
-                                </div> */}
                                 <h2 className="text-4xl font-bold text-gray-300 mb-3">What I Do Best</h2>
                                 <p className="text-gray-400 text-xl mb-14 max-w-4xl mx-auto">
                                         I craft scroll-stopping edits and content strategies that keep your audience hooked and your brand looking top-tier.
@@ -54,13 +49,15 @@ export default function Services() {
                                                 <motion.div
                                                         key={service.title}
                                                         whileHover={{ scale: 1.02 }}
-                                                        className="bg-neutral-900 text-left rounded-3xl p-6 shadow-lg text-gray-100 relative overflow-hidden border border-neutral-800"
+                                                        className="bg-[#0d0d0d] text-left rounded-3xl p-6 shadow-lg text-gray-100 relative overflow-hidden border border-neutral-800"
                                                 >
                                                         <div className="flex items-center gap-3 mb-4">
                                                                 {service.icon}
                                                                 <h3 className="text-xl font-semibold">{service.title}</h3>
                                                         </div>
-                                                        <p className="text-gray-400 text-[17px] mb-6 leading-relaxed">{service.description}</p>
+                                                        <h3 className="text-gray-400 text-[16px] font-normal mb-6 leading-relaxed">
+                                                                {service.description}
+                                                        </h3>
                                                         <div className="flex flex-wrap gap-3 mt-20">
                                                                 {service.tags.map((tag) => (
                                                                         <span

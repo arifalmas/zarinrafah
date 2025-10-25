@@ -13,7 +13,7 @@ interface NavItem {
 }
 
 const NAV_ITEMS: NavItem[] = [
-        { name: "About", href: "#about" },
+        { name: "About", href: "/about" },
         { name: "Work", href: "#works" },
         { name: "Solution", href: "#solution" },
         { name: "Pricing", href: "#pricing" },
@@ -25,8 +25,8 @@ export default function Header() {
 
         return (
                 <header className="sticky top-0 z-50 backdrop-blur-xl bg-black border-b border-neutral-800">
-                        <div className="mx-auto max-w-[74rem] px-4 sm:px-6 lg:px-8">
-                                <div className="flex h-18 items-center justify-between">
+                        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-1">
+                                <div className="flex h-20 items-center justify-between">
 
                                         {/* Logo */}
                                         <Link href="/" className="flex items-center gap-3 group">

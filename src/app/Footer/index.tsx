@@ -1,18 +1,28 @@
 'use client';
 
 import { Instagram, Linkedin, Mail, Twitter } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 
 export default function Footer() {
         return (
-                <footer className="bg-[#111111] text-gray-300 border-t border-gray-800 py-10 px-6">
+                <footer className="bg-[#0a0a0a] text-gray-300 border-t border-gray-800 py-12 px-6 font-[Poppins]">
                         <div className="max-w-7xl mx-auto grid md:grid-cols-4 gap-12">
                                 {/* Brand Info */}
-                                <div className="md:col-span-2">
-                                        <h2 className="text-2xl font-bold text-white mb-3">
-                                                Zarin Rafah
-                                        </h2>
-                                        <p className="text-gray-400 leading-relaxed max-w-md">
+                                <div className="md:col-span-2 flex flex-col">
+                                        <div className="flex items-center gap-3 mb-3">
+                                                <Image
+                                                        src="/zarinrafah.jpg" // replace with your logo path
+                                                        alt="Zarin Rafah Logo"
+                                                        width={40}
+                                                        height={40}
+                                                        className="object-contain rounded-xl border border-gray-700"
+                                                />
+                                                <h2 className="text-3xl font-extrabold text-white">
+                                                        Zarin Rafah
+                                                </h2>
+                                        </div>
+                                        <p className="text-gray-400 mt-2 leading-relaxed text-[16px] max-w-md">
                                                 Elevate your brand with captivating video content that tells your story and engages your audience.
                                         </p>
 
@@ -44,9 +54,9 @@ export default function Footer() {
                                 <div className="flex flex-col sm:flex-row gap-10 sm:gap-20">
                                         {/* Site Map */}
                                         <div>
-                                                <h3 className="text-white font-semibold mb-4 text-lg">Site Map</h3>
-                                                <ul className="space-y-2 text-sm">
-                                                        <li><Link href="#about" className="hover:text-orange-400 transition">About</Link></li>
+                                                <h3 className="text-white font-bold mb-4 text-lg">Site Map</h3>
+                                                <ul className="space-y-2 text-base">
+                                                        <li><Link href="/about" className="hover:text-orange-400 transition">About</Link></li>
                                                         <li><Link href="#pricing" className="hover:text-orange-400 transition">Pricing</Link></li>
                                                         <li><Link href="#works" className="hover:text-orange-400 transition">Works</Link></li>
                                                         <li><Link href="#services" className="hover:text-orange-400 transition">Services</Link></li>
@@ -55,8 +65,8 @@ export default function Footer() {
 
                                         {/* Support */}
                                         <div>
-                                                <h3 className="text-white font-semibold mb-4 text-lg">Support</h3>
-                                                <ul className="space-y-2 text-sm">
+                                                <h3 className="text-white font-bold mb-4 text-lg">Support</h3>
+                                                <ul className="space-y-2 text-base">
                                                         <li><Link href="/contact" className="hover:text-orange-400 transition">Contact</Link></li>
                                                         <li><Link href="/book-a-call" className="hover:text-orange-400 transition">Book a Call</Link></li>
                                                 </ul>
@@ -64,9 +74,9 @@ export default function Footer() {
                                 </div>
 
                                 {/* LinkedIn Section */}
-                                <div className="flex flex-col justify-start sm:justify-end  sm:mt-0 border border-gray-700 p-6 rounded-xl ">
-                                        <h3 className="text-white font-semibold mb-3 text-lg">Let's Connect</h3>
-                                        <p className="text-gray-400 mb-4 text-sm max-w-[220px]">
+                                <div className="flex flex-col justify-start sm:justify-end sm:mt-0 border border-gray-700 p-6 rounded-xl">
+                                        <h3 className="text-white font-bold mb-3 text-lg">Let's Connect</h3>
+                                        <p className="text-gray-400 mb-4 text-base max-w-[220px]">
                                                 Explore creative collaborations and strategic ideas with me on LinkedIn.
                                         </p>
                                         <Link
@@ -80,11 +90,11 @@ export default function Footer() {
                         </div>
 
                         {/* Bottom Line */}
-                        <div className="max-w-7xl mx-auto border-t border-gray-800 mt-10 pt-6 flex flex-col md:flex-row justify-between text-xs text-gray-400">
+                        <div className="max-w-7xl mx-auto border-t border-gray-800 mt-10 pt-6 flex flex-col md:flex-row justify-between text-sm text-gray-400">
                                 <p>© 2025 Zarin Rafah. All Rights Reserved.</p>
                                 <p className="mt-2 md:mt-0">
                                         Design & Developed by{" "}
-                                        <span className="text-white font-medium">
+                                        <span className="text-white font-medium hover:text-orange-400 transition">
                                                 <a href="https://www.arifalmas.com/" target="_blank">Arif Almas</a>
                                         </span>
                                 </p>

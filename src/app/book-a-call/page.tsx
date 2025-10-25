@@ -1,45 +1,28 @@
-"use client";
+import BookACallClient from "./BookACallClient";
 
-import Cal, { getCalApi } from "@calcom/embed-react";
-import { useEffect } from "react";
-import Footer from "../Footer";
+export const metadata = {
+        title: "Book a Call with Zarin Rafah",
+        description:
+                "Schedule a discovery call with Zarin Rafah to discuss your branding, content strategy, or video editing project. Let’s collaborate and bring your creative vision.",
+        openGraph: {
+                title: "Book a Call with Zarin Rafah",
+                description:
+                        "Schedule a discovery call with Zarin Rafah to discuss your branding, content strategy, or video editing project. Let’s collaborate and bring your creative vision.",
+                url: "https://zarinrafah.com/book-a-call",
+                siteName: "Zarin Rafah",
+                images: [
+                        {
+                                url: "https://zarinrafah.com/og-image.png",
+                                width: 1200,
+                                height: 630,
+                                alt: "Book a Call with Zarin Rafah",
+                        },
+                ],
+                locale: "en_US",
+                type: "website",
+        },
+};
 
 export default function BookACallPage() {
-        useEffect(() => {
-                (async function () {
-                        const cal = await getCalApi({ namespace: "15min" });
-                        cal("ui", { hideEventTypeDetails: false, layout: "month_view" });
-                })();
-        }, []);
-
-        return (
-                <>
-
-                        <div className="min-h-screen flex flex-col items-center justify-center px-4 py-12 text-white">
-                                <h1 className="text-3xl md:text-4xl font-semibold mb-4 text-white text-center">
-                                        Book a 15-Minute Call with Zarin Rafah
-                                </h1>
-                                <p className="text-gray-400 mb-8 text-center max-w-xl">
-                                        Let's discuss your web project, ideas, or collaboration plans. Pick a
-                                        suitable time below and let's make it happen.
-                                </p>
-
-                                <div className="w-full max-w-5xl h-[600px] z-20 bg-[#1E1E1E] rounded-xl overflow-hidden border border-gray-700">
-                                        <Cal
-                                                namespace="15min"
-                                                calLink="arifalmas/15min"
-                                                style={{
-                                                        width: "100%",
-                                                        height: "100%",
-                                                        overflow: "scroll",
-                                                        border: "none",
-                                                        backgroundColor: "#1E1E1E",
-                                                }}
-                                                config={{ layout: "month_view" }}
-                                        />
-                                </div>
-                        </div>
-                        <Footer />
-                </>
-        );
+        return <BookACallClient />;
 }
