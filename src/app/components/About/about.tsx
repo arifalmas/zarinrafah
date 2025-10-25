@@ -126,7 +126,7 @@ export default function Work() {
                                                 whileInView={{ opacity: 1, y: 0 }}
                                                 transition={{ duration: 0.6, delay: 0.3 }}
                                                 viewport={{ once: true }}
-                                                className="relative rounded-2xl overflow-hidden bg-[#151515] h-[420px] sm:h-[560px] md:h-[600px]"
+                                                className="relative rounded-2xl overflow-hidden p-3 bg-[#151515] h-[420px] sm:h-[560px] md:h-[600px]"
                                         >
                                                 <video
                                                         src="/videos/zarin.mp4"

@@ -15,17 +15,30 @@ export default function ContactClient() {
                 message: "",
         });
 
-        const handleChange = (e) =>
+        // ✅ Properly typed change handler
+        const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
                 setFormData({ ...formData, [e.target.name]: e.target.value });
+        };
 
-        const handleSubmit = (e) => {
+        // ✅ Safe and properly encoded mailto link
+        const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
                 e.preventDefault();
+
                 const { name, email, subject, message } = formData;
+
+                const body = `
+Name: ${name}
+Email: ${email}
+
+Message:
+${message}
+                `;
+
                 const mailtoLink = `mailto:collabzarinrafah@gmail.com?subject=${encodeURIComponent(
                         subject || "New Message"
-                )}&body=${encodeURIComponent(
-                        `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`
-                )}`;
+                )}&body=${encodeURIComponent(body)}`;
+
+                // ✅ Open mail client safely
                 window.location.href = mailtoLink;
         };
 
@@ -36,7 +49,7 @@ export default function ContactClient() {
                                 style={{ fontFamily: "Poppins, sans-serif" }}
                         >
                                 <div className="max-w-6xl mx-auto">
-                                        {/* ===== Combined Fade-in for Heading & Subtitle ===== */}
+                                        {/* ===== Heading ===== */}
                                         <motion.div
                                                 initial={{ opacity: 0, y: 50 }}
                                                 whileInView={{ opacity: 1, y: 0 }}
@@ -45,14 +58,15 @@ export default function ContactClient() {
                                                 className="text-center mb-12"
                                         >
                                                 <h2 className="text-4xl md:text-5xl font-extrabold text-gray-100 mb-4 tracking-tight">
-                                                        Let’s start a project <span className="text-orange-500">together</span>
+                                                        Let’s start a project{" "}
+                                                        <span className="text-[#FF5100]">together</span>
                                                 </h2>
                                                 <p className="text-gray-300 font-medium max-w-2xl mx-auto">
                                                         Got a project in mind or just want to say hi? Fill out the form or
                                                         send an email at{" "}
                                                         <a
                                                                 href="mailto:collabzarinrafah@gmail.com"
-                                                                className="text-orange-400 underline"
+                                                                className="text-[#FF5100] underline"
                                                         >
                                                                 collabzarinrafah@gmail.com
                                                         </a>{" "}
@@ -83,24 +97,24 @@ export default function ContactClient() {
                                                         <motion.a
                                                                 href="/#about"
                                                                 whileHover={{ scale: 1.05 }}
-                                                                className="inline-block bg-orange-500 text-white font-medium px-6 py-3 rounded-full transition hover:bg-orange-600 w-fit"
+                                                                className="inline-block bg-[#FF5100] text-white font-medium px-6 py-3 rounded-full transition hover:bg-[#e04a00] w-fit"
                                                         >
                                                                 About Zarin Rafah
                                                         </motion.a>
 
                                                         <div className="mt-4 space-y-3 text-sm text-gray-300">
                                                                 <p className="flex items-center gap-2">
-                                                                        <MapPin size={18} className="text-orange-500" /> Dhaka,
+                                                                        <MapPin size={18} className="text-[#FF5100]" /> Dhaka,
                                                                         Bangladesh
                                                                 </p>
                                                                 <p className="flex items-center gap-2">
-                                                                        <Phone size={18} className="text-orange-500" /> +880 1971-186878
+                                                                        <Phone size={18} className="text-[#FF5100]" /> +880 1971-186878
                                                                 </p>
                                                                 <p className="flex items-center gap-2">
-                                                                        <Mail size={18} className="text-orange-500" />{" "}
+                                                                        <Mail size={18} className="text-[#FF5100]" />{" "}
                                                                         <a
                                                                                 href="mailto:collabzarinrafah@gmail.com"
-                                                                                className="underline hover:text-orange-400"
+                                                                                className="underline hover:text-[#FF5100]"
                                                                         >
                                                                                 collabzarinrafah@gmail.com
                                                                         </a>
@@ -127,7 +141,7 @@ export default function ContactClient() {
                                                                                 value={formData.name}
                                                                                 onChange={handleChange}
                                                                                 required
-                                                                                className="w-full p-3 rounded-lg border border-gray-800 bg-[#121212] text-white focus:outline-none focus:border-orange-500"
+                                                                                className="w-full p-3 rounded-lg border border-gray-800 bg-[#121212] text-white focus:outline-none focus:border-[#FF5100]"
                                                                         />
                                                                         <input
                                                                                 type="email"
@@ -136,7 +150,7 @@ export default function ContactClient() {
                                                                                 value={formData.email}
                                                                                 onChange={handleChange}
                                                                                 required
-                                                                                className="w-full p-3 rounded-lg border border-gray-800 bg-[#121212] text-white focus:outline-none focus:border-orange-500"
+                                                                                className="w-full p-3 rounded-lg border border-gray-800 bg-[#121212] text-white focus:outline-none focus:border-[#FF5100]"
                                                                         />
                                                                 </div>
 
@@ -147,7 +161,7 @@ export default function ContactClient() {
                                                                         value={formData.subject}
                                                                         onChange={handleChange}
                                                                         required
-                                                                        className="w-full p-3 rounded-lg border border-gray-800 bg-[#121212] text-white focus:outline-none focus:border-orange-500"
+                                                                        className="w-full p-3 rounded-lg border border-gray-800 bg-[#121212] text-white focus:outline-none focus:border-[#FF5100]"
                                                                 />
 
                                                                 <textarea
@@ -157,13 +171,13 @@ export default function ContactClient() {
                                                                         value={formData.message}
                                                                         onChange={handleChange}
                                                                         required
-                                                                        className="w-full p-3 rounded-lg border border-gray-800 bg-[#121212] text-white focus:outline-none focus:border-orange-500"
+                                                                        className="w-full p-3 rounded-lg border border-gray-800 bg-[#121212] text-white focus:outline-none focus:border-[#FF5100]"
                                                                 ></textarea>
 
                                                                 <motion.button
                                                                         whileHover={{ scale: 1.05 }}
                                                                         type="submit"
-                                                                        className="bg-orange-500 text-white font-semibold px-8 py-3 rounded-full hover:bg-orange-600 transition w-full md:w-auto"
+                                                                        className="bg-[#FF5100] text-white font-semibold px-8 py-3 rounded-full hover:bg-[#e04a00] transition w-full md:w-auto"
                                                                 >
                                                                         Submit Now
                                                                 </motion.button>
