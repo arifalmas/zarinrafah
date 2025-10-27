@@ -92,12 +92,7 @@ export default function Footer() {
                         {/* Bottom Line */}
                         <div className="max-w-7xl mx-auto border-t border-gray-800 mt-10 pt-6 flex flex-col md:flex-row justify-between text-sm text-gray-400">
                                 <p>© 2025 Zarin Rafah. All Rights Reserved.</p>
-                                <p className="mt-2 md:mt-0">
-                                        Design & Developed by{" "}
-                                        <span className="text-white font-medium hover:text-orange-400 transition">
-                                                <a href="https://www.arifalmas.com/" target="_blank">Arif Almas</a>
-                                        </span>
-                                </p>
+
                         </div>
                 </footer>
         );
