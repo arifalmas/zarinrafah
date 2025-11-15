@@ -26,7 +26,7 @@ export default function BookACallClient() {
                                 <div className="w-full max-w-5xl h-[600px] z-20 bg-[#1E1E1E] rounded-xl overflow-hidden border border-gray-700">
                                         <Cal
                                                 namespace="15min"
-                                                calLink="arifalmas/15min"
+                                                calLink="zarinrafah/15min"
                                                 style={{
                                                         width: "100%",
                                                         height: "100%",
