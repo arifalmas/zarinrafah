@@ -33,6 +33,11 @@ const longFormVideos = [
                         "Started my editing journey with 0 skills and 5 months later, My work got featured.",
                 youtubeUrl: "https://www.youtube.com/embed/bfo3QgviQqY?si=THpxX6bYYx6bINeg",
         },
+        {
+                title:
+                        "Trust The Process – Official Teaser | A Story by Zarin Rafah",
+                youtubeUrl: "https://www.youtube.com/embed/XY3o092OSn8?si=I1MMndTVwgh6O0W-",
+        },
 ];
 
 // 🟠 Cloudinary Reels (replace with your real URLs)
