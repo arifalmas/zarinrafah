@@ -108,7 +108,7 @@ ${message}
                                                                         Bangladesh
                                                                 </p>
                                                                 <p className="flex items-center gap-2">
-                                                                        <Phone size={18} className="text-[#FF5100]" /> +880 1971-186878
+                                                                        <Phone size={18} className="text-[#FF5100]" /> +880 1682-470932
                                                                 </p>
                                                                 <p className="flex items-center gap-2">
                                                                         <Mail size={18} className="text-[#FF5100]" />{" "}
