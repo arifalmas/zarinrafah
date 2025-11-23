@@ -42,26 +42,18 @@ const longFormVideos = [
 
 // 🟠 Cloudinary Reels (replace with your real URLs)
 const reels = [
-        {
-                title: "Reel One",
-                cloudinaryUrl:
-                        "https://res.cloudinary.com/dbvzabvuy/video/upload/v1760691680/reel3_qyee5r.mp4",
-        },
-        {
-                title: "Reel Two",
-                cloudinaryUrl:
-                        "https://res.cloudinary.com/dbvzabvuy/video/upload/v1760675830/reel2_c2catp.mp4",
-        },
-        {
-                title: "Reel Three",
-                cloudinaryUrl:
-                        "https://res.cloudinary.com/dbvzabvuy/video/upload/v1760696180/Comp_5_2_2_t1wko9.mp4",
-        },
+
         {
                 title: "Reel Four",
                 cloudinaryUrl:
-                        "https://res.cloudinary.com/dbvzabvuy/video/upload/v1760697100/zarinr_adqjnd.mp4",
+                        "https://player.vimeo.com/video/1139818144?badge=0&amp;autopause=0",
         },
+        {
+                title: "Reel Six",
+                cloudinaryUrl: "https://player.vimeo.com/video/1139815504?badge=0&autopause=0",
+                type: "vimeo"
+        }
+
 ];
 
 export default function WorksShowcase() {
@@ -94,6 +86,7 @@ export default function WorksShowcase() {
                         </div>
 
                         {/* Shorts Grid (Cloudinary videos) */}
+                        {/* Shorts Grid (Vimeo videos) */}
                         {activeTab === "shorts" && (
                                 <motion.div
                                         className="grid sm:grid-cols-2 md:grid-cols-4 gap-6 mb-16"
@@ -107,19 +100,19 @@ export default function WorksShowcase() {
                                                         className="rounded-2xl bg-[#121212] shadow-md overflow-hidden"
                                                 >
                                                         <div className="relative pb-[177.78%] h-0 overflow-hidden rounded-lg">
-                                                                <video
+                                                                <iframe
                                                                         src={reel.cloudinaryUrl}
-                                                                        className="absolute top-0 left-0 w-full h-full object-cover rounded-lg"
-                                                                        muted
-                                                                        playsInline
-                                                                        controls
-                                                                        preload="metadata"
-                                                                />
+                                                                        className="absolute top-0 left-0 w-full h-full rounded-lg"
+                                                                        frameBorder="0"
+                                                                        allow="autoplay; fullscreen; picture-in-picture"
+                                                                        allowFullScreen
+                                                                ></iframe>
                                                         </div>
                                                 </div>
                                         ))}
                                 </motion.div>
                         )}
+
 
 
                         {/* Long-form YouTube videos */}
