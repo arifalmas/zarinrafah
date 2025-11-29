@@ -20,25 +20,33 @@ const ourSolutions = [
 const longFormVideos = [
         {
                 title: "Power of Brain | Jhankar Mahbub",
-                description:
-                        "I edited this amazing educational video by Jhankar Mahbub “Power of Brain” bringing his teaching to life with engaging transitions!",
                 youtubeUrl: "https://www.youtube.com/embed/HvfWN6372ng?si=hvQkgxpRZ5VsRRgv",
+                type: "youtube",
         },
-        {
-                title: "Bet! You won't regret after hiring Zarin Rafah",
-                youtubeUrl: "https://www.youtube.com/embed/QnJjRd6_wn0?si=95MDD8lR7PUhW_OB",
-        },
+
         {
                 title:
                         "Started my editing journey with 0 skills and 5 months later, My work got featured.",
                 youtubeUrl: "https://www.youtube.com/embed/bfo3QgviQqY?si=THpxX6bYYx6bINeg",
+                type: "youtube",
         },
         {
-                title:
-                        "Trust The Process – Official Teaser | A Story by Zarin Rafah",
+                title: "Trust The Process – Official Teaser | A Story by Zarin Rafah",
                 youtubeUrl: "https://www.youtube.com/embed/XY3o092OSn8?si=I1MMndTVwgh6O0W-",
+                type: "youtube",
+        },
+        {
+                title: "Bet! You won't regret after hiring Zarin Rafah",
+                vimeoUrl: "https://player.vimeo.com/video/1141629332",
+                type: "vimeo",
+        },
+        {
+                title: "Bet! You won't regret after hiring Zarin Rafah",
+                vimeoUrl: "https://player.vimeo.com/video/1141629242",
+                type: "vimeo",
         },
 ];
+
 
 // 🟠 Cloudinary Reels (replace with your real URLs)
 const reels = [
@@ -124,18 +132,32 @@ export default function WorksShowcase() {
                                         transition={{ duration: 0.5 }}
                                 >
                                         {longFormVideos.map((video, idx) => (
-                                                <iframe
-                                                        key={idx}
-                                                        src={video.youtubeUrl}
-                                                        className="w-full h-60 md:h-48 lg:h-56 object-cover rounded-2xl"
-                                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                                        allowFullScreen
-                                                        loading="lazy"
-                                                />
+                                                <div key={idx} className="rounded-2xl overflow-hidden bg-black">
+                                                        {video.type === "youtube" && (
+                                                                <iframe
+                                                                        src={video.youtubeUrl}
+                                                                        className="w-full h-60 md:h-48 lg:h-56 rounded-2xl"
+                                                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                                                        allowFullScreen
+                                                                        loading="lazy"
+                                                                />
+                                                        )}
 
+                                                        {video.type === "vimeo" && (
+                                                                <iframe
+                                                                        src={video.vimeoUrl}
+                                                                        className="w-full h-60 md:h-48 lg:h-56 rounded-2xl"
+                                                                        frameBorder="0"
+                                                                        allow="autoplay; fullscreen; picture-in-picture"
+                                                                        allowFullScreen
+                                                                        loading="lazy"
+                                                                />
+                                                        )}
+                                                </div>
                                         ))}
                                 </motion.div>
                         )}
+
                         {/*  */}
                         <motion.section
                                 className="max-w-6xl mx-auto rounded-2xl p-7 md:p-10 bg-gradient-to-br from-[#121212] to-[#1e1e1e] border border-gray-800 shadow-lg overflow-hidden relative"
